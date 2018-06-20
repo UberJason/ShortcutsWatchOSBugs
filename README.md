@@ -7,11 +7,11 @@ This sample project shows _two_ bugs in watchOS 5 beta 2 related to custom Inten
 1. Run the iOS app once, which triggers a donation and shows the shortcut on Spotlight.
 2. Run the watchOS app once, which sets a relevant shortcut and shows the shortcut on Siri Watch Face.
 
-## First watch bug: a shortcut on watchOS handles successfully but shows error UI.
+## First watch bug: a shortcut on watchOS handles successfully but shows error UI. (Radar: [41296288](https://bugreport.apple.com/web/?problemID=41296288))
 1. Debug the iOS shortcut from Spotlight: notice that it handles correctly and then shows the success UI correctly.
 2. Debug the watchOS shortcut from the Siri Watch Face: notice that it handles successfully (prints "Handled!") but shows the UI "There was a problem. Try again...".
 
-## Second watch bug: if the confirm(intent:completion:) method is implemented, the handle(intent:completion:) method is not called when running a shortcut.
+## Second watch bug: if the confirm(intent:completion:) method is implemented, the handle(intent:completion:) method is not called when running a shortcut. (Radar: [41296444](https://bugreport.apple.com/web/?problemID=41296444))
 1. Debug the iOS shortcut from Spotlight: notice that it confirms and handles successfully (prints "Confirmed!" and "Handled!")
 2. Debug the watchOS shortcut from the Siri Watch Face: notice that it handles successfully (prints "Handled!"), and shows the UI "There was a problem. Try again..."
 3. In WatchIntentHandler.swift, uncomment lines 20-23, implementing confirm(intent:completion:)
