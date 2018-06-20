@@ -131,6 +131,7 @@
 		1F035B1320DAC5FB00B695FD /* MywatchOSIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MywatchOSIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F035B1520DAC5FB00B695FD /* WatchIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchIntentHandler.swift; sourceTree = "<group>"; };
 		1F035B1720DAC5FB00B695FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9693D9E320DACE3200615671 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +169,7 @@
 		1F035AB920DAC56700B695FD = {
 			isa = PBXGroup;
 			children = (
+				9693D9E320DACE3200615671 /* README.md */,
 				1F035AC420DAC56700B695FD /* ShortcutsWatchOSBugs */,
 				1F035AD820DAC56800B695FD /* ShortcutsWatchOSBugs WatchKit App */,
 				1F035AE720DAC56800B695FD /* ShortcutsWatchOSBugs WatchKit Extension */,
