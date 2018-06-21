@@ -18,37 +18,88 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGH-eJ-qli">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="dXO-jb-gNH">
-                                        <rect key="frame" x="20" y="20" width="320" height="841.5"/>
-                                        <mutableString key="text">Prerequisites (do these first):
-0. In iOS Settings.app, ensure developer settings for shortcuts testing are set ("Display Recent Shortcuts" and "Display Donations on Lock Screen").
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xwr-6t-cmV">
+                                        <rect key="frame" x="20" y="20" width="335" height="1183.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prerequisites (do these first):" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="dXO-jb-gNH">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="yfI-q8-Oq6">
+                                                <rect key="frame" x="0.0" y="28.5" width="335" height="161.5"/>
+                                                <string key="text">0. In iOS Settings.app, ensure developer settings for shortcuts testing are set ("Display Recent Shortcuts" and "Display Donations on Lock Screen").
 1. Run the iOS app once, which triggers a donation and shows the shortcut on Spotlight.
-2. Run the watchOS app once, which sets a relevant shortcut and shows the shortcut on Siri Watch Face.
-
-First watch bug: a shortcut on watchOS handles successfully but shows error UI.
-1. Debug the iOS shortcut from Spotlight: notice that it handles correctly and then shows the success UI correctly.
-2. Debug the watchOS shortcut from the Siri Watch Face: notice that it handles successfully (prints "Handled!") but shows the UI "There was a problem. Try again...".
-
-Second watch bug: if the confirm(intent:completion:) method is implemented, the handle(intent:completion:) method is not called when running a shortcut.
-1. Debug the iOS shortcut from Spotlight: notice that it confirms and handles successfully (prints "Confirmed!" and "Handled!")
+2. Run the watchOS app once, which sets a relevant shortcut and shows the shortcut on Siri Watch Face.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First watch bug: a shortcut on watchOS handles successfully but shows error UI." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="N1m-Lq-keQ">
+                                                <rect key="frame" x="0.0" y="198" width="335" height="42.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="vld-B1-usu">
+                                                <rect key="frame" x="0.0" y="248.5" width="335" height="125.5"/>
+                                                <string key="text">1. Debug the iOS shortcut from Spotlight: notice that it handles correctly and then shows the success UI correctly.
+2. Debug the watchOS shortcut from the Siri Watch Face: notice that it handles successfully (prints "Handled!") but shows the UI "There was a problem. Try again...".</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="LqU-Vk-bRL">
+                                                <rect key="frame" x="0.0" y="382" width="335" height="108.5"/>
+                                                <string key="text">Second watch bug: if the confirm(intent:completion:) method is implemented, the handle(intent:completion:) method is not called when running a shortcut.</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="eoh-I1-e3M">
+                                                <rect key="frame" x="0.0" y="498.5" width="335" height="233"/>
+                                                <mutableString key="text">1. Debug the iOS shortcut from Spotlight: notice that it confirms and handles successfully (prints "Confirmed!" and "Handled!")
 2. Debug the watchOS shortcut from the Siri Watch Face: notice that it handles successfully (prints "Handled!"), and shows the UI "There was a problem. Try again..."
 3. In WatchIntentHandler.swift, uncomment lines 20-23, implementing confirm(intent:completion:)
-4. Rebuild and debug the watchOS shortcut from the Siri Watch Face again: this time, it confirms (prints "Confirmed!") but never calls handle(intent:completion:).
-
-
-(Note: debugging the iOS or watchOS shortcut means selecting the iOS or watchOS intent scheme in Xcode, running with Siri, and then launching the shortcut as mentioned above.)</mutableString>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+4. Rebuild and debug the watchOS shortcut from the Siri Watch Face again: this time, it confirms (prints "Confirmed!") but never calls handle(intent:completion:).</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="9hZ-GL-6tU">
+                                                <rect key="frame" x="0.0" y="739.5" width="335" height="86.5"/>
+                                                <string key="text">Third watch bug: No methods on ExtensionDelegate for resuming from an Intent are called when the user taps on an Intent confirmation to adjust details.</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="cBe-YP-WFp">
+                                                <rect key="frame" x="0.0" y="834" width="335" height="233"/>
+                                                <string key="text">1. Debug the watchOS app, setting breakpoints in ExtensionDelegate's handle(intent:completionHandler:), handle(intent:), and handleUserActivity(userInfo:) methods.
+2. Go back to the Siri Watch Face, and invoke the shortcut, bringing up the confirmation dialog.
+3. Instead of tapping "Do", tap on the intent platter itself to launch the watch app. Observe that none of the breakpoints in the three ExtensionDelegate methods are triggered, and none of the print statements print. The app simply resumes.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="bky-7J-dv9">
+                                                <rect key="frame" x="0.0" y="1075" width="335" height="108.5"/>
+                                                <string key="text">(Note: debugging the iOS or watchOS shortcut means selecting the iOS or watchOS intent scheme in Xcode, running with Siri, and then launching the shortcut as mentioned above.)</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="dXO-jb-gNH" firstAttribute="top" secondItem="uGH-eJ-qli" secondAttribute="top" constant="20" id="Mr8-Bg-J0K"/>
-                                    <constraint firstAttribute="bottom" secondItem="dXO-jb-gNH" secondAttribute="bottom" constant="20" id="PO4-gO-pRG"/>
-                                    <constraint firstItem="dXO-jb-gNH" firstAttribute="leading" secondItem="uGH-eJ-qli" secondAttribute="leading" constant="20" id="TPN-FM-TRw"/>
-                                    <constraint firstAttribute="trailing" secondItem="dXO-jb-gNH" secondAttribute="trailing" constant="20" id="qng-tr-ugJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xwr-6t-cmV" secondAttribute="trailing" constant="-20" id="Bnd-Qy-OUs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xwr-6t-cmV" secondAttribute="bottom" constant="20" id="MkQ-h2-okA"/>
+                                    <constraint firstItem="Xwr-6t-cmV" firstAttribute="leading" secondItem="uGH-eJ-qli" secondAttribute="leading" constant="20" id="TBd-qi-Ph1"/>
+                                    <constraint firstItem="Xwr-6t-cmV" firstAttribute="top" secondItem="uGH-eJ-qli" secondAttribute="top" constant="20" id="ixI-0k-HXu"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -57,7 +108,7 @@ Second watch bug: if the confirm(intent:completion:) method is implemented, the 
                             <constraint firstAttribute="trailing" secondItem="uGH-eJ-qli" secondAttribute="trailing" id="NNk-fl-GyN"/>
                             <constraint firstItem="uGH-eJ-qli" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OOW-IB-jRO"/>
                             <constraint firstItem="Uee-0j-aNJ" firstAttribute="bottom" secondItem="uGH-eJ-qli" secondAttribute="bottom" id="UYv-BM-S2E"/>
-                            <constraint firstItem="uGH-eJ-qli" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kMt-BI-B9z"/>
+                            <constraint firstItem="uGH-eJ-qli" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" id="kMt-BI-B9z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>

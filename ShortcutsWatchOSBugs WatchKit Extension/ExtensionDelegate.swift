@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import Intents
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
@@ -52,5 +53,20 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             }
         }
     }
+}
 
+// MARK: Siri Shortcut Handling
+
+extension ExtensionDelegate {
+    func handle(_ intent: INIntent, completionHandler: @escaping (INIntentResponse) -> Void) {
+        print(intent.debugDescription)
+    }
+    
+    func handle(_ userActivity: NSUserActivity) {
+        print(userActivity.debugDescription)
+    }
+    
+    func handleUserActivity(_ userInfo: [AnyHashable : Any]?) {
+        print(userInfo?.debugDescription)
+    }
 }
