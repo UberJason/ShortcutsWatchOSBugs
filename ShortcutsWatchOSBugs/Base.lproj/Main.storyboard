@@ -78,7 +78,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="cBe-YP-WFp">
                                                 <rect key="frame" x="0.0" y="834" width="335" height="233"/>
-                                                <string key="text">1. Debug the watchOS app, setting breakpoints in ExtensionDelegate's handle(intent:completionHandler:), handle(intent:), and handleUserActivity(userInfo:) methods.
+                                                <string key="text">1. Debug the watchOS app, setting breakpoints in ExtensionDelegate's handle(intent:completionHandler:), handle(userActivity:), and handleUserActivity(userInfo:) methods.
 2. Go back to the Siri Watch Face, and invoke the shortcut, bringing up the confirmation dialog.
 3. Instead of tapping "Do", tap on the intent platter itself to launch the watch app. Observe that none of the breakpoints in the three ExtensionDelegate methods are triggered, and none of the print statements print. The app simply resumes.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>

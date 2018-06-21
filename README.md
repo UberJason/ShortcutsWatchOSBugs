@@ -17,8 +17,8 @@ This sample project shows _three_ bugs in watchOS 5 beta 2 related to custom Int
 3. In WatchIntentHandler.swift, uncomment lines 20-23, implementing `confirm(intent:completion:)`
 4. Rebuild and debug the watchOS shortcut from the Siri Watch Face again: this time, it confirms (prints "Confirmed!") but never calls `handle(intent:completion:)`.
 
-## Third watch bug: No methods on ExtensionDelegate for resuming from an Intent are called when the user taps on an Intent confirmation to adjust details.
-1. Debug the watchOS app, setting breakpoints in ExtensionDelegate's `handle(intent:completionHandler:)`, `handle(intent:)`, and `handleUserActivity(userInfo:)` methods.
+## Third watch bug: No methods on ExtensionDelegate for resuming from an Intent are called when the user taps on an Intent confirmation to adjust details. (Radar: [41334278](https://bugreport.apple.com/web/?problemID=41334278))
+1. Debug the watchOS app, setting breakpoints in ExtensionDelegate's `handle(intent:completionHandler:)`, `handle(userActivity:)`, and `handleUserActivity(userInfo:)` methods.
 2. Go back to the Siri Watch Face, and invoke the shortcut, bringing up the confirmation dialog.
 3. Instead of tapping "Do", tap on the intent platter itself to launch the watch app. Observe that none of the breakpoints in the three ExtensionDelegate methods are triggered, and none of the print statements print. The app simply resumes.
 
