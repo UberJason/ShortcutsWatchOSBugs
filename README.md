@@ -1,5 +1,12 @@
 #  Siri Shortcut Bugs in watchOS 5 beta 2
 
+## UPDATE July 18
+An Apple engineer helped to determine my project was incorrectly configured. There were two missing steps:
+1) The NSUserActivityTypes need to be added to the WatchKit App target 
+2) The intents definition file should also be added to the WatchKit App target 
+
+This project is now updated with those changes and verified that all three issues are now solved!
+
 This sample project shows _three_ bugs in watchOS 5 beta 2 related to custom Intents and Siri Shortcuts. I have filed three radars, one for each one, but all three reference this sample project. To see the bugs, please perform the Preqrequisites, then go to the corresponding section and perform those steps.
 
 ## Prerequisites (do these first):

@@ -27,6 +27,7 @@
 		1F035B1A20DAC5FB00B695FD /* MywatchOSIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F035B1320DAC5FB00B695FD /* MywatchOSIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1F035B1F20DAC5FF00B695FD /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1F035AFC20DAC5DB00B695FD /* Intents.intentdefinition */; };
 		1F035B2020DAC5FF00B695FD /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1F035AFC20DAC5DB00B695FD /* Intents.intentdefinition */; };
+		965DEA7E20FF96A000E9D998 /* Intents.intentdefinition in Resources */ = {isa = PBXBuildFile; fileRef = 1F035AFC20DAC5DB00B695FD /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -402,6 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965DEA7E20FF96A000E9D998 /* Intents.intentdefinition in Resources */,
 				1F035ADD20DAC56800B695FD /* Assets.xcassets in Resources */,
 				1F035ADB20DAC56800B695FD /* Interface.storyboard in Resources */,
 			);
