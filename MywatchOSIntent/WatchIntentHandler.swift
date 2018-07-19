@@ -17,10 +17,10 @@ class WatchIntentHandler: INExtension, DoSomethingIntentHandling {
         return self
     }
     
-//    func confirm(intent: DoSomethingIntent, completion: @escaping (DoSomethingIntentResponse) -> Void) {
-//        print("Confirmed!")
-//        completion(DoSomethingIntentResponse(code: .success, userActivity: nil))
-//    }
+    func confirm(intent: DoSomethingIntent, completion: @escaping (DoSomethingIntentResponse) -> Void) {
+        print("Confirmed!")
+        completion(DoSomethingIntentResponse(code: .ready, userActivity: nil))
+    }
     
     func handle(intent: DoSomethingIntent, completion: @escaping (DoSomethingIntentResponse) -> Void) {
         print("Handled!")

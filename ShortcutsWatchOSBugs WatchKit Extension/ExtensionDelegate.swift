@@ -17,6 +17,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidBecomeActive() {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        print("WatchKit extension did become active")
     }
 
     func applicationWillResignActive() {
@@ -46,6 +47,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
                 relevantShortcutTask.setTaskCompletedWithSnapshot(false)
             case let intentDidRunTask as WKIntentDidRunRefreshBackgroundTask:
                 // Be sure to complete the intent-did-run task once you're done.
+                print("Intent did run")
                 intentDidRunTask.setTaskCompletedWithSnapshot(false)
             default:
                 // make sure to complete unhandled task types
